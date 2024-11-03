@@ -1,0 +1,312 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+header {
+    background-color: #1a2a6c;
+    padding: 20px 0;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('gambar/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    color: black;
+    font-size: 48px;
+}
+
+.hero p {
+    color: black;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #ffd700;
+    color: #1a2a6c;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.cta:hover {
+    background-color: #ffb700;
+}
+.about-section {
+    background-color: white;
+    padding: 40px;
+    flex: 1;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-text h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+section.portfolio {
+    padding-top: 20px;
+}
+.portfolio {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+}
+
+.portfolio h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+.portfolio-item {
+    flex: 1;
+    min-width: 20%;
+    min-height: 10%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+.portfolio-item p {
+    text-align: center;
+    margin-top: 10px;
+}
+/* Testimonials Section */
+
+.testimonials {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.testimonials h2 {
+    font-size: 28px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.testimonial-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial-item {
+    margin-top: 10px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 100%;
+}
+
+.testimonial-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.testimonial-item span {
+    font-weight: bold;
+}
+section.testimonials {
+    padding-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #1a2a6c;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+/* Section Styles */
+section {
+    min-height: 100vh; /* Membuat setiap section setinggi viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1a2a6c;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    form {
+        width: 90%;
+    }
+    .portfolio-items {
+        flex-direction: column; /* Menyusun item secara vertikal */
+        align-items: center;
+    }
+
+    .portfolio-item {
+        min-width: 100%; /* Setiap item mengambil lebar penuh */
+        margin-bottom: 20px; /* Beri jarak antar item */
+    }
+
+    .portfolio-item img {
+        height: auto; /* Sesuaikan tinggi gambar agar proporsional */
+    }
+    .about-text h2 {
+        order: -2;
+    }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image {
+        order: -1; /* Memastikan gambar berada di atas teks */
+    }
+    
+}
